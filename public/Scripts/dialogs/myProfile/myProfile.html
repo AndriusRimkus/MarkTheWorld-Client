@@ -1,0 +1,49 @@
+<md-dialog class="dialog-my-profile">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>My Profile</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="vm.cancel()" aria-label="Close dialog" title="Close dialog">
+                <md-icon md-svg-src="~/../img/icons/ic_clear_white_48px.svg" class="s32"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div layout layout-padding layout-align="start center">
+            <div layout="column" class="user-avatar" ng-click="vm.myProfilePicture()">
+                <img ng-src="{{vm.profileData.pictureAddress}}" />
+                <p>Tap to change</p>
+            </div>
+            <div class="profile-main-info">
+                <h3>{{vm.profileData.name}}</h3>
+                <table>
+                    <tr>
+                        <td class="row-title">Country:</td>
+                        <td><img ng-src="~/../img/flags/{{vm.profileData.flagAddress}}" title="{{vm.profileData.countryName}}" alt="{{vm.profileData.countryName}}"/></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title">Points:</td>
+                        <td>{{ vm.profileData.points }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <md-subheader>Daily reward</md-subheader>
+        <md-divider></md-divider>
+        <md-list>
+            <md-list-item class="md-list-item-reward">
+                <md-icon md-svg-src="~/../img/icons/ic_monetization_on.svg" class="s32"></md-icon>
+                <bonus-points profile-data="vm.profileData"></bonus-points>
+            </md-list-item>
+        </md-list>
+        <md-subheader>Account settings</md-subheader>
+        <md-divider></md-divider>
+        <md-list>
+            <md-list-item>
+                <div ng-attr-style="background: rgb({{vm.profileData.colors.red}},{{vm.profileData.colors.green}},{{vm.profileData.colors.blue}})" class="user-color"></div>
+                <p>Color</p>
+                <md-button class="md-secondary" ng-click="vm.myProfileColor()">Edit</md-button>
+            </md-list-item>
+        </md-list>
+    </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,72 @@
+<md-toolbar class="md-primary">
+    <div class="md-toolbar-tools">
+        <h3>Mark The Planet</h3>
+        <span flex=""></span>
+
+        <md-menu>
+            <md-button aria-label="Account" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                <md-icon md-svg-src="~/../img/icons/ic_more_vert_white_48px.svg" class="s48" aria-label="More"></md-icon>
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <md-button aria-label="Filter map" ng-click="vm.filterMap($event)">
+                        <md-icon md-svg-src="~/../img/icons/ic_filter_list.svg" class="s24" md-menu-align-target></md-icon>
+                        Filter map
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button aria-label="Filter map" ng-click="vm.toplist($event)">
+                        <md-icon md-svg-src="~/../img/icons/ic_star.svg" class="s24" md-menu-align-target></md-icon>
+                        Toplist
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+        <md-menu ng-if="vm.user.isLogged">
+            <md-button class="md-icon-button avatar-button" aria-label="Account" ng-click="$mdOpenMenu($event)">
+                <img ng-src="{{ vm.user.avatar }}" alt="{{ vm.user.username }}"/>
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <p>Logged as: {{ vm.user.username }}</p>
+                </md-menu-item>
+                <md-menu-divider></md-menu-divider>
+                <md-menu-item>
+                    <md-button ng-click="vm.myProfile($event)">
+                        My profile
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="vm.logout($event)">
+                        Logout
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+        <md-menu ng-if="!vm.user.isLogged">
+            <md-button class="md-icon-button" aria-label="Account" ng-click="$mdOpenMenu($event)">
+                <md-icon md-svg-icon="~/../img/icons/ic_account_box_white_48px.svg" class="s48" aria-label="Account"></md-icon>
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <md-button ng-click="vm.openRightSideNav('login')">
+                        Login
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="vm.openRightSideNav('register')">
+                        Register
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item class="menu-item-facebook">
+                    <md-button ng-click="vm.facebookLogin()">
+                        <span class="icon-button-facebook"></span>
+                        Log in with Facebook
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>

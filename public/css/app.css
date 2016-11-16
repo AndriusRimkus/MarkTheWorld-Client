@@ -1,0 +1,730 @@
+body {
+    overflow: hidden;
+}
+
+/* animations */
+.animate-if.ng-enter, .animate-if.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/* icon sizes */
+
+.s48 {
+    width: 48px;
+    height: 48px;
+}
+
+.s36 {
+    width: 36px;
+    height: 36px;
+}
+
+.s32 {
+    width: 32px;
+    height: 32px;
+}
+
+.s29 {
+    width: 29px;
+    height: 29px;
+}
+
+.s24 {
+    width: 24px;
+    height: 24px;
+}
+
+/* toast */
+
+md-toast.custom-toast .md-toast-content {
+    padding-right: 0;
+}
+
+md-toast.custom-toast .md-button.md-icon-button {
+    margin-right: 3px;
+}
+
+/* icon buttons */
+
+.md-button.md-icon-button {
+    width: auto;
+    height: auto;
+}
+
+md-dialog .md-button.md-icon-button {
+    padding: 0;
+}
+
+.md-toolbar-tools .md-button.md-icon-button {
+    padding: 0;
+    margin: 0 4px;
+}
+
+/* buttons */
+
+@-webkit-keyframes jump {
+    0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+    }
+}
+
+@keyframes jump {
+    0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+    }
+}
+
+.md-fab-claim-spot md-icon {
+    -webkit-animation: jump 0.3s ease-out 0s infinite;
+            animation: jump 0.3s ease-out 0s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+action-buttons .md-button.md-fab:nth-child(2) {
+    right: 100px;
+}
+
+.md-button.md-secondary {
+    border: 1px solid rgba(158,158,158,0.2);
+}
+
+.md-button.md-secondary:hover {
+    border: 1px solid rgba(158,158,158,0.2);
+}
+
+.menu-item-facebook {
+    background: #3e5a98;
+    color: white;
+}
+
+md-menu-item>.md-button span.icon-button-facebook {
+    background: url(/img/icons/facebook-icon.png) no-repeat;
+    width: 29px;
+    height: 29px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -1px 10px 0 0;
+}
+
+.md-button.md-default-theme.md-primary {
+    color: currentColor;
+    border: 1px solid rgba(158,158,158,0.2);
+}
+
+/* toolbar */
+
+.avatar-button img {
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 960px) {
+    .avatar-button img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* dialogs */
+
+@media (min-width: 960px) {
+    md-dialog {
+        min-width: 450px;
+    }
+}
+
+md-dialog .md-toolbar-tools {
+    padding-right: 8px;
+}
+
+md-dialog .md-subheader {
+    padding: 0;
+    background-color: rgb(245,245,245);
+}
+
+.panel-error {
+    position: relative;
+    width: 100%;
+    background: rgb(255,204,188);
+    color: #3E2723;
+    margin-top: 8px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 3px;
+    font-size: 13px;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.panel-error md-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    color: rgb(130, 98, 89);
+}
+
+.panel-error .panel-error-text {
+    padding-left: 44px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.panel-error.ng-hide-add, .panel-error.ng-hide-remove {
+  transition: opacity linear 0.3s;
+}
+
+.panel-error.ng-hide {
+  opacity: 0;
+}
+
+/* filter map dialog */
+md-dialog.dialog-filter-map .md-dialog-content {
+    padding: 16px;
+}
+
+md-dialog.dialog-filter-map input {
+    padding-right: 20px;
+}
+
+md-dialog.dialog-filter-map .panel-error {
+    margin-top: 16px;
+}
+
+md-dialog.dialog-filter-map md-dialog-content .panel-info.layout-row {
+    margin-bottom: 16px;
+    padding: 8px;
+    background: rgb(245,245,245);
+    border-radius: 3px;
+}
+
+md-dialog.dialog-filter-map md-autocomplete {
+    padding-right: 120px;
+}
+
+md-dialog.dialog-filter-map md-autocomplete[md-floating-label] md-input-container {
+    padding-bottom: 0;
+    margin: 0;
+}
+
+md-dialog.dialog-filter-map md-autocomplete md-autocomplete-wrap md-progress-linear.md-inline {
+    bottom: -3px;
+}
+
+md-dialog.dialog-filter-map .list-item-filter {
+    margin-top: 8px;
+    padding-left: 14px;
+}
+
+md-dialog.dialog-filter-map .md-errors-spacer {
+    display: none;
+}
+
+md-dialog.dialog-filter-map .list-item-filter svg {
+    position: absolute;
+    right: 2px;
+    top: 9px;
+    width: 18px;
+    height: 18px;
+    color: rgba(0,0,0,0.54);
+    fill: currentColor;
+    cursor: pointer;
+}
+
+md-dialog.dialog-filter-map .list-item-filter svg:focus {
+    outline: none;
+}
+
+/* claim spot dialog */
+
+md-dialog.dialog-claim-spot md-dialog-content .panel-info.layout-row {
+    margin: 16px 8px 8px;
+    padding: 8px;
+    background: rgb(245,245,245);
+    border-radius: 3px;
+}
+
+md-dialog.dialog-claim-spot form {
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+md-dialog.dialog-claim-spot .panel-info md-icon, md-dialog.dialog-filter-map .panel-info md-icon {
+    margin: 0;
+    opacity: 0.3;
+}
+
+md-dialog.dialog-claim-spot .panel-info p, md-dialog.dialog-filter-map .panel-info p {
+    margin: 0 0 0 8px;
+}
+
+md-dialog.dialog-claim-spot .button-claim {
+    padding: 3px 16px 3px 12px;
+    margin: 16px 0 24px;
+}
+
+md-dialog.dialog-claim-spot .button-add-picture {
+    margin: 0;
+}
+
+md-dialog.dialog-claim-spot md-input-container {
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+md-dialog.dialog-claim-spot .file-preview {
+    padding: 8px 16px;
+}
+
+md-dialog.dialog-claim-spot .file-preview > div {
+    position: relative;
+}
+
+md-dialog.dialog-claim-spot .file-preview button {
+    position: absolute;
+    left: -24px;
+    top: -24px;
+}
+
+md-dialog.dialog-claim-spot .file-preview img, md-dialog.dialog-spot-details .attached-photo img {
+    max-width: 100%;
+    max-height: 450px;
+    border: 1px solid #e1e1e1;
+    padding: 4px;
+}
+
+@media (min-width: 960px) {
+    md-dialog.dialog-claim-spot .file-preview img, md-dialog.dialog-spot-details .attached-photo img {
+        max-width: 350px;
+        max-height: 350px;
+    }
+}
+
+md-dialog.dialog-claim-spot .panel-error.error-claim {
+    margin-top: 0;
+    padding: 0;
+}
+
+md-dialog.dialog-claim-spot .panel-error.error-file {
+    margin-top: 24px;
+}
+
+/* my color dialog */
+
+md-dialog.dialog-my-profile-color profile-color-container .md-tab,
+md-dialog.dialog-my-profile-color profile-color-container md-pagination-wrapper,
+md-dialog.dialog-my-profile-color profile-color-container md-tabs-canvas,
+md-dialog.dialog-my-profile-color profile-color-container md-tabs-wrapper {
+    max-height: 36px;
+    height: 36px;
+}
+
+md-dialog.dialog-my-profile-color profile-color-container .md-tab {
+    padding: 8px 24px;
+}
+
+md-dialog.dialog-my-profile-color profile-color-container md-tabs[md-align-tabs=bottom] {
+    padding-bottom: 36px;
+}
+
+md-dialog.dialog-my-profile-color profile-color-container md-tabs[md-align-tabs=bottom] md-tabs-content-wrapper {
+    bottom: 36px;
+}
+
+md-dialog.dialog-my-profile-color md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
+    min-height: 258px;
+}
+
+md-dialog.dialog-my-profile-color .md-tab md-icon {
+    margin-top: -2px;
+}
+
+md-dialog.dialog-my-profile-color .md-tab:last-of-type md-icon {
+    margin-right: 2px;
+}
+
+md-dialog.dialog-my-profile-color .md-tab {
+    background: rgba(0,0,0,.075);
+}
+
+md-dialog.dialog-my-profile-color .md-tab.md-active {
+    background: #fff;
+}
+
+md-dialog.dialog-my-profile-color .color-picker-palette {
+    padding: 4px;
+}
+
+md-dialog.dialog-my-profile-color .color-picker-palette .color-cell {
+    cursor: pointer;
+    height: 25px;
+}
+
+md-dialog.dialog-my-profile-color .color-sliders-container {
+    padding-right: 16px;
+}
+
+md-dialog.dialog-my-profile-color .color-sliders-container input {
+    padding: 2px 2px 1px;
+    line-height: 26px;
+    height: 30px;
+    min-width: 50px;
+    width: 50px;
+    border-radius: 0;
+    border: 0 solid rgba(0, 0, 0, 0.12);
+    border-bottom-width: 1px;
+    margin-left: 24px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+md-dialog.dialog-my-profile-color .color-sliders-container input:focus {
+    outline: 0;
+    border-color: rgb(63, 81, 181);
+    border-width: 0 0 2px;
+    padding-bottom: 0;
+}
+
+md-dialog.dialog-my-profile-color .color-sliders-container .color-sliders-name {
+    min-width: 70px;
+}
+
+md-slider.md-default-theme.md-primary .md-thumb:after, md-slider.md-primary .md-thumb:after {
+    border-color: rgb(63,81,181);
+    background-color: rgb(63,81,181);
+}
+
+md-slider.md-default-theme.md-min .md-thumb:after, md-slider.md-min .md-thumb:after {
+    border-color: rgb(255,64,129);
+    background-color: rgb(255,64,129);
+}
+
+md-slider.md-default-theme.md-green .md-thumb:after, md-slider.md-green .md-thumb:after {
+    border-color: rgb(85, 231, 62);
+    background-color: rgb(85, 231, 62);
+}
+
+md-slider.md-default-theme.md-green .md-focus-ring, md-slider.md-green .md-focus-ring {
+    background-color: rgb(85, 231, 62);
+}
+
+md-slider.md-default-theme.md-green .md-track.md-track-fill, md-slider.md-green .md-track.md-track-fill {
+    background-color: rgb(85, 231, 62);
+}
+
+/* toplist dialog */
+
+md-dialog.dialog-toplist md-dialog-content {
+    position: relative;
+    height: 100%;
+}
+
+md-dialog.dialog-toplist md-tabs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+md-dialog.dialog-toplist .md-dialog-content {
+    padding: 16px;
+}
+
+md-dialog.dialog-toplist .panel-info.layout-row {
+    padding: 8px;
+    padding-left: 14px;
+    background: rgb(245,245,245);
+    border-radius: 3px;
+}
+
+md-dialog.dialog-toplist button {
+    padding: 0 8px;
+}
+
+md-dialog.dialog-toplist .panel-info.layout-row p {
+    font-size: 14px;
+    margin: 0;
+}
+
+md-dialog.dialog-toplist .player-info {
+    margin-right: 16px;
+}
+
+md-dialog.dialog-toplist md-list-item {
+    padding: 16px 0;
+}
+
+md-dialog.dialog-toplist .md-list-item-text button {
+    margin-left: 0;
+}
+
+md-dialog.dialog-toplist md-list-item .md-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 8px 16px 8px 0;
+}
+
+md-dialog.dialog-toplist md-input-container {
+    margin: 0;
+}
+
+md-dialog.dialog-toplist .md-errors-spacer {
+    display: none;
+}
+
+/* my picture dialog */
+md-dialog.dialog-my-profile-picture .profile-picture-first-step p {
+    text-align: center;
+    opacity: 0.5;
+    margin: 20px 0 16px;
+}
+
+md-dialog.dialog-my-profile-picture {
+    max-width: 450px;
+    height: 500px;
+}
+
+md-dialog.dialog-my-profile-picture .md-button.md-icon-button {
+    padding: 8px;
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-first-step md-input-container {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-first-step .image-url {
+    width: 100%;
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-first-step {
+    margin: 0;
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-first-step .button-image-url {
+    margin: 0;
+    min-width: 32px;
+    border: 1px solid rgb(63, 81, 181);
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-first-step .button-image-url[disabled] {
+    border: 1px solid rgba(158,158,158,0.2);
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-first-step .button-browse {
+    min-height: 42px;
+    padding-right: 11px;
+    margin: 0;
+}
+
+md-dialog.dialog-my-profile-picture .md-errors-spacer {
+    display: none;
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-first-step .panel-error {
+    width: 100%;
+    margin: 0;
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-second-step p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 32px;
+}
+
+md-dialog.dialog-my-profile-picture .profile-picture-second-step md-divider {
+    margin-bottom: 8px;
+}
+
+/* spot details dialog */
+md-dialog.dialog-spot-details {
+    max-width: 450px;
+}
+
+blockquote {
+    display: block;
+    overflow: hidden;
+    padding: 16px 16px 8px 54px;
+    margin: 0;
+    position: relative;
+    word-break: break-all;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+    position: absolute;
+    left: 16px;
+    top: 3px;
+}
+
+md-dialog.dialog-spot-details button {
+    padding: 0 8px;
+}
+
+/* my profile dialog */
+@media (min-width: 960px) {
+    md-dialog.dialog-my-profile {
+        height: initial;
+    }
+}
+
+md-dialog.dialog-my-profile .user-avatar {
+    padding-right: 24px;
+}
+
+md-dialog.dialog-my-profile .user-avatar:hover {
+    cursor: pointer;
+}
+
+md-dialog.dialog-my-profile .user-avatar img, md-dialog.dialog-spot-details .user-avatar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+md-dialog.dialog-my-profile .user-avatar p, md-dialog.dialog-spot-details .user-avatar p {
+    font-size: 12px;
+    text-align: center;
+    margin: 3px 0 0 0;
+}
+
+md-dialog.dialog-my-profile .profile-main-info h3, md-dialog.dialog-spot-details .profile-main-info h3 {
+    margin: 0;
+}
+
+md-dialog.dialog-my-profile .row-title, md-dialog.dialog-spot-details .row-title {
+    text-align: right;
+    padding: 0 8px 0 0;
+}
+
+md-dialog.dialog-my-profile table, md-dialog.dialog-spot-details table {
+    border-spacing: 0 2px;
+}
+
+md-dialog.dialog-my-profile .user-color, md-dialog.dialog-my-profile-color .user-color {
+    width: 28px;
+    height: 28px;
+    margin-left: 2px;
+    margin-right: 10px;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+md-dialog.dialog-my-profile .md-list-item-user-password md-icon, md-dialog.dialog-my-profile .md-list-item-reward md-icon {
+    margin: 0 8px 0 0;
+    color: #757575;
+    width: 32px;
+}
+
+/* login/register dialog */
+
+md-progress-linear.register-form-loader {
+    position: absolute;
+}
+
+.login-form form {
+    padding: 0;
+}
+
+.login-form md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+    -webkit-transform: translate3d(0,32px,0) scale(1);
+    transform: translate3d(0,32px,0) scale(1);
+}
+
+.login-form md-input-container.md-input-has-value label:not(.md-no-float) {
+    -webkit-transform: translate3d(0,6px,0) scale(.75);
+    transform: translate3d(0,6px,0) scale(.75);
+}
+
+.login-form md-input-container.md-input-focused label:not(.md-no-float) {
+    -webkit-transform: translate3d(0,6px,0) scale(.75);
+    transform: translate3d(0,6px,0) scale(.75);
+}
+
+.login-form a {
+    cursor: pointer;
+}
+
+.login-form input {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.login-form md-select {
+    height: 40px;
+}
+
+.login-form md-select md-select-value span:first-child {
+    font-size: 16.5px;
+}
+
+.login-form md-select md-select-value span:first-child div {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.login-form md-input-container {
+    margin-bottom: 0;
+}
+
+.login-form md-input-container:last-of-type {
+    margin-bottom: 16px;
+}
+
+.login-form button {
+    height: 42px;
+    margin: 8px 0 0;
+}
+
+md-input-container.md-input-invalid md-select .md-select-value {
+    border-bottom-color: rgb(221,44,0);
+}
+
+.login-form md-progress-circular {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.login-form .errors {
+    position: relative;
+    clear: left;
+}
+
+.login-form .errors .error {
+    color: rgb(221,44,0);
+    font-size: 12px;
+    line-height: 14px;
+    overflow: hidden;
+    transition: all .3s cubic-bezier(.55,0,.55,.2);
+    padding-top: 5px;
+}
