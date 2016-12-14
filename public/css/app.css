@@ -256,80 +256,6 @@ md-dialog.dialog-filter-map .list-item-filter svg:focus {
     outline: none;
 }
 
-/* claim spot dialog */
-
-md-dialog.dialog-claim-spot md-dialog-content .panel-info.layout-row {
-    margin: 16px 8px 8px;
-    padding: 8px;
-    background: rgb(245,245,245);
-    border-radius: 3px;
-}
-
-md-dialog.dialog-claim-spot form {
-    padding: 0;
-    margin-bottom: 8px;
-}
-
-md-dialog.dialog-claim-spot .panel-info md-icon, md-dialog.dialog-filter-map .panel-info md-icon {
-    margin: 0;
-    opacity: 0.3;
-}
-
-md-dialog.dialog-claim-spot .panel-info p, md-dialog.dialog-filter-map .panel-info p {
-    margin: 0 0 0 8px;
-}
-
-md-dialog.dialog-claim-spot .button-claim {
-    padding: 3px 16px 3px 12px;
-    margin: 16px 0 24px;
-}
-
-md-dialog.dialog-claim-spot .button-add-picture {
-    margin: 0;
-}
-
-md-dialog.dialog-claim-spot md-input-container {
-    margin-bottom: 0;
-    margin-top: 8px;
-}
-
-md-dialog.dialog-claim-spot .file-preview {
-    padding: 8px 16px;
-}
-
-md-dialog.dialog-claim-spot .file-preview > div {
-    position: relative;
-}
-
-md-dialog.dialog-claim-spot .file-preview button {
-    position: absolute;
-    left: -24px;
-    top: -24px;
-}
-
-md-dialog.dialog-claim-spot .file-preview img, md-dialog.dialog-spot-details .attached-photo img {
-    max-width: 100%;
-    max-height: 450px;
-    border: 1px solid #e1e1e1;
-    padding: 4px;
-}
-
-@media (min-width: 960px) {
-    md-dialog.dialog-claim-spot .file-preview img, md-dialog.dialog-spot-details .attached-photo img {
-        max-width: 350px;
-        max-height: 350px;
-    }
-}
-
-md-dialog.dialog-claim-spot .panel-error.error-claim {
-    margin-top: 0;
-    padding: 0;
-}
-
-md-dialog.dialog-claim-spot .panel-error.error-file {
-    margin-top: 24px;
-}
-
 /* my color dialog */
 
 md-dialog.dialog-my-profile-color profile-color-container .md-tab,
@@ -648,6 +574,7 @@ md-dialog.dialog-my-profile .md-list-item-user-password md-icon, md-dialog.dialo
 
 md-progress-linear.register-form-loader {
     position: absolute;
+    bottom: 0;
 }
 
 .login-form form {

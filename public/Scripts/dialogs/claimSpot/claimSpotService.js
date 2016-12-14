@@ -1,13 +1,16 @@
 /*global module */
 'use strict';
 
+import template from './claimSpot.html';
+import './claimSpot.scss';
+
 function claimSpotService($mdDialog, config, $q, $http, userService, Upload) {
     return {
         showDialog: function (ev) {
             $mdDialog.show({
                 controller: 'claimSpotController',
                 controllerAs: 'vm',
-                templateUrl: '/Scripts/dialogs/claimSpot/claimSpot.html',
+                template: template,
                 parent: angular.element(document.body),
                 targetEvent: ev,
                 fullscreen: true,
